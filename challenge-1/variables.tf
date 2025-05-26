@@ -5,7 +5,8 @@ variable "environment" {
 }
 
 variable "s3_buckets" {
-  type = set(string)
+  type    = set(string)
+  default = ["kplabs-1", "kplabs-2"]
 }
 
 variable "s3_base_object" {
