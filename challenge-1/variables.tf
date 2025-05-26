@@ -1,16 +1,26 @@
 
 variable "environment" {
-  type = number
+  type    = string
+  default = "production"
 }
 
 variable "s3_buckets" {
   type = set(string)
 }
 
-variable "s3_base_object" {}
+variable "s3_base_object" {
+  type    = string
+  default = "base.txt"
+}
 
-variable "org-name" {}
+variable "org-name" {
+  type    = string
+  default = "kplabs"
+}
 
-variable "region" {}
+variable "region" {
+  type    = string
+  default = "us-east-1c"
+}
 
-variable "sg_name" {}
+# variable "sg_name" {}
